@@ -145,10 +145,10 @@ class DatanodeServer {
     class DeleteHandler implements HttpHandler{
         public void handle(HttpExchange exchange) throws IOException {
             if ("GET".equals(exchange.getRequestMethod())) {
-                handleGetRequest(exchange);
+                handleDeleteRequest(exchange);
             } 
         }
-        private void handleGetRequest(HttpExchange exchange) throws IOException {
+        private void handleDeleteRequest(HttpExchange exchange) throws IOException {
             String uri = exchange.getRequestURI().toString();
             // System.out.print(uri);
 
