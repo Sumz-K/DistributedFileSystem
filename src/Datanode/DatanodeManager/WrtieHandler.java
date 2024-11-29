@@ -11,12 +11,12 @@ public class WrtieHandler implements HttpHandler {
     public void handle(HttpExchange exchange) throws IOException {
         if ("POST".equals(exchange.getRequestMethod())) {
             handlePostRequest(exchange);
-        }
+        }   
     }
 
     private void handlePostRequest(HttpExchange exchange) throws IOException {
 
-        // filename:data
+        // filename:data   
         BufferedReader br = new BufferedReader(new InputStreamReader(exchange.getRequestBody()));
         StringBuilder requestBody = new StringBuilder();
         String line;
